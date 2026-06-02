@@ -4,47 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .button {
-          width: 100px;
-          height: 100px;
-          border: solid black 2px;
-          display: inline-block;
-        }
-        span {
-            display: block;
-        }
-        #grey {
-        background: grey;
-        }
-        #white {
-          background: white;
-        }
-        #blue {
-          background: blue;
-        }
-        #yellow {
-          background: yellow;
-        }
-
-    </style>
 </head>
 <body>
-    <h1>Color Scheme Switcher</h1>
-      <span class="button" id="grey"></span>
-      <span class="button" id="white"></span>
-      <span class="button" id="blue"></span>
-      <span class="button" id="yellow"></span>
-
+    <div>
+        <button id="blue" class = "button">blue</button>
+        <button id="red" class = "button">red</button>
+        <button id="white" class = "button">white</button>
+        <button id = "green" class = "button">green</button>
+    </div>
     <script>
-        const button = document.querySelectorAll(".button")
-        const body = document.querySelector("body")
-        console.log(button)
-        button.forEach(function (button){
-            button.addEventListener("click",function(e){
-                document.querySelector("body").style.backgroundColor = e.target.id
-            })
-
+        
+        const color = document.getElementById("blue").innerText
+        color.addEventListener("click",()=>{
+            const bod = document.getElementsByTagName("body")
+            
         })
     </script>
 </body>
